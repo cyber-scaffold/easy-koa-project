@@ -17,7 +17,9 @@
     "axios": "^0.19.2",
     "koa": "^2.13.0",
     "module-alias": "^2.2.2",
-    "moment": "^2.27.0",
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.4"
   }
 }
