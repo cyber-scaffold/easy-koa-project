@@ -3,7 +3,7 @@ const Router = require("@koa/router");
 const router = new Router();
 
 router.get("/test", async (context) => {
-  context.response.body = "test-server"
+  return "test-server"
 });
 
-module.exports = router;
+module.exports = router.routes();

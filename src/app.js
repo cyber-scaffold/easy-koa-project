@@ -1,11 +1,16 @@
-const Koa = require("koa");
-const cors = require("@koa/cors");
+import Koa from "koa";
+import cors from "@koa/cors";
+import response_middleware from "@/middlewares/response_middleware";
+
+import hello_word from "@/routers/hello-word";
+import test_server from "@/routers/test-server";
+
 const server = new Koa();
 
-
 server.use(cors());
-server.use(require("@/routers/hello-word").routes());
-server.use(require("@/routers/test-server").routes());
+server.use(response_middleware);
+server.use(hello_word);
+server.use(test_server);
 
 server.listen(8080, () => {
   console.log("server run at port 8080");

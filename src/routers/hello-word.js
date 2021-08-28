@@ -1,9 +1,9 @@
-const Router = require("@koa/router");
+import Router from "@koa/router";
 
 const router = new Router();
 
 router.get("/", async (context) => {
-  context.response.body = "hello words"
+  return "hello words";
 });
 
-module.exports = router;
+export default router.routes();
