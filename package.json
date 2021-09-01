@@ -6,9 +6,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env ENV_VALUE=development_local nodemon index.js",
-    "docker:local": "cross-env ENV_VALUE=docker_local pm2-runtime index.js",
-    "docker:test": "cross-env ENV_VALUE=docker_test pm2-runtime index.js",
-    "docker:prod": "cross-env ENV_VALUE=docker_prod pm2-runtime index.js"
+    "start:docker:local": "cross-env ENV_VALUE=docker_local pm2-runtime index.js",
+    "build:docker:local": "docker build -f dockerfile.local -t koa-microservice .",
+    "start:docker:test": "cross-env ENV_VALUE=docker_test pm2-runtime index.js",
+    "build:docker:test": "docker build -f dockerfile.test -t koa-microservice .",
+    "start:docker:prod": "cross-env ENV_VALUE=docker_prod pm2-runtime index.js",
+    "build:docker:prod": "docker build -f dockerfile.prod -t koa-microservice ."
   },
   "keywords": [
     "cyber",
