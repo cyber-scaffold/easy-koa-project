@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env ENV_VALUE=development_local nodemon index.js",
+    "dev:docker": "docker run -ditv $(pwd):/data/my-node-server -p 8080:8080 koa-microservice",
     "start:docker:local": "cross-env ENV_VALUE=docker_local pm2-runtime index.js",
     "build:docker:local": "docker build -f dockerfile.local -t koa-microservice .",
     "start:docker:test": "cross-env ENV_VALUE=docker_test pm2-runtime index.js",
