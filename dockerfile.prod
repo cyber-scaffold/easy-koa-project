@@ -13,6 +13,6 @@ RUN npm install pm2 -g
 RUN npm install
 RUN npm run build
 
-CMD npm run start:docker:prod
+CMD npm run docker:start:prod
 
 EXPOSE 8080
