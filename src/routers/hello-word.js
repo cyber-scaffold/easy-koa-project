@@ -2,7 +2,7 @@ import Router from "@koa/router";
 
 const router = new Router();
 
-router.get("/", async (context) => {
+router.get("/api/hello_words", async (context) => {
   return "hello words";
 });
 
