@@ -2,6 +2,7 @@ import Koa from "koa";
 import cors from "@koa/cors";
 import response_middleware from "@/middlewares/response_middleware";
 
+import look_env_value from "@/routers/look_env_value";
 import hello_word from "@/routers/hello-word";
 import test_server from "@/routers/test-server";
 import upload from "@/routers/upload";
@@ -10,6 +11,8 @@ const server = new Koa();
 
 server.use(cors());
 server.use(response_middleware);
+
+server.use(look_env_value);
 server.use(hello_word);
 server.use(test_server);
 server.use(upload);
