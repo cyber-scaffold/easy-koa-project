@@ -1,0 +1,17 @@
+{
+  "name": "接口文档",
+  "version": "1.0.0",
+  "description": "这是基于koa2的nodejs服务",
+  "title": "微服务接口文档",
+  "url": "http://api.example.com:[port]/api",
+  "sampleUrl": false,
+  "header": {
+    "filename": "header.md"
+  },
+  "template": {
+    "showRequiredLabels": true,
+    "withCompare": true,
+    "withGenerator": true,
+    "aloneDisplay": false
+  }
+}
